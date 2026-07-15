@@ -25,4 +25,4 @@ COPY . .
 EXPOSE 8000
 
 # Use a shell command to ensure the app uses the PORT assigned by Render
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port $PORT"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
