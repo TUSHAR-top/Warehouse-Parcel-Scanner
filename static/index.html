@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Warehouse Parcel Scan</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1>Warehouse Parcel Scan</h1>
+    <p class="subtitle">Turn parcel label photos into shipment data, automatically.</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section id="upload-section" class="card">
+    <h2>1. Upload parcel photos</h2>
+    <p class="hint">JPG or PNG, up to 500 images per batch. Processing runs in the background — you can close this tab and come back later.</p>
+
+    <div id="dropzone" class="dropzone">
+      <input type="file" id="file-input" accept="image/jpeg,image/png,image/jpg" multiple hidden />
+      <div class="dropzone-content">
+        <div class="dropzone-icon">&#128247;</div>
+        <p><strong>Click to choose photos</strong> or drag and drop them here</p>
+        <p class="hint" id="file-count-hint"></p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="upload-btn" class="btn btn-primary" disabled>Upload &amp; Start Scan</button>
+      <span id="upload-error" class="error-text" role="alert"></span>
+    </div>
+  </section>
+
+  <section id="jobs-section" class="card">
+    <h2>Recent batches</h2>
+    <p class="hint">Reopen this page any time — your batches and results are saved on the server.</p>
+    <div id="jobs-list" class="jobs-list"></div>
+  </section>
+
+  <section id="job-section" class="card hidden">
+    <h2>2. Progress</h2>
+    <div id="job-progress">
+      <div class="progress-bar-track">
+        <div id="progress-bar-fill" class="progress-bar-fill" style="width:0%"></div>
+      </div>
+      <p id="progress-text" class="hint"></p>
+      <div id="status-badges" class="status-badges"></div>
+    </div>
+  </section>
+
+  <section id="results-section" class="card hidden">
+    <h2>3. Results</h2>
+    <div class="actions results-actions">
+      <button id="download-csv-btn" class="btn btn-secondary">Download CSV</button>
+      <label class="filter-label">
+        Filter:
+        <select id="status-filter">
+          <option value="">All statuses</option>
+        </select>
+      </label>
+      <span id="results-count" class="hint"></span>
+    </div>
+    <div class="table-wrap">
+      <table id="results-table">
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Filename</th>
+            <th>Status</th>
+            <th>Tracking / AWB</th>
+            <th>Weight (kg)</th>
+            <th>Dimensions (cm, L×W×H)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="results-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<div id="lightbox" class="lightbox hidden">
+  <div class="lightbox-inner">
+    <button id="lightbox-close" class="btn btn-secondary lightbox-close">Close</button>
+    <img id="lightbox-img" src="" alt="Parcel photo" />
+  </div>
+</div>
+
+<footer class="footer">
+  <p>Status codes reference: <a href="#" id="taxonomy-link">what do the flags mean?</a></p>
+</footer>
+
+<div id="taxonomy-modal" class="modal hidden">
+  <div class="modal-inner">
+    <button id="taxonomy-close" class="btn btn-secondary lightbox-close">Close</button>
+    <h2>Status flag taxonomy</h2>
+    <table id="taxonomy-table">
+      <thead><tr><th>Code</th><th>Flag</th><th>Meaning</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
