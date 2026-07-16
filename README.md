@@ -49,6 +49,8 @@ Photos go in through the browser, each one is analyzed independently by an OCR +
 <!-- ============================================= -->
 
 *[Architecture diagram will be placed here]*
+<img width="1500" height="980" alt="image" src="https://github.com/user-attachments/assets/f078a98f-f36c-4c6b-a891-cfcd35ad7ff5" />
+
 
 **Pipeline walkthrough, in the order code actually runs:**
 
