@@ -48,7 +48,8 @@ Photos go in through the browser, each one is analyzed independently by an OCR +
 <!-- ![Architecture Diagram](docs/images/architecture.png) -->
 <!-- ============================================= -->
 
-*[Architecture diagram will be placed here]*
+<img width="1560" height="880" alt="image" src="https://github.com/user-attachments/assets/8305939e-ac00-4757-a707-54d28a400250" />
+
 <img width="1500" height="980" alt="image" src="https://github.com/user-attachments/assets/f078a98f-f36c-4c6b-a891-cfcd35ad7ff5" />
 
 
@@ -160,7 +161,8 @@ The repo does not currently include a `.env.example` file — see the note at th
 <!-- ![Upload screen](docs/images/upload-screen.png) -->
 <!-- ============================================= -->
 
-*[Screenshot: Upload screen — will be placed here]*
+<img width="1891" height="917" alt="image" src="https://github.com/user-attachments/assets/7f77511f-0e6d-445a-8c9c-4640577a12bf" />
+
 
 **2. Watch progress.** A progress bar shows how many of the batch have been processed so far, with a live count of how many fell into each status. You can close the tab at any point — the batch keeps processing on the server, and reopening the same link later picks up right where it left off.
 
@@ -170,7 +172,8 @@ The repo does not currently include a `.env.example` file — see the note at th
 <!-- ![Processing progress view](docs/images/processing-progress-view.png) -->
 <!-- ============================================= -->
 
-*[Screenshot: Processing/progress view — will be placed here]*
+<img width="921" height="681" alt="image" src="https://github.com/user-attachments/assets/8df02ad1-df67-4737-8f9c-c3d58976ec92" />
+
 
 **3. Review results.** Each photo becomes one row: a thumbnail, its filename, a colored status badge, and whatever was read — tracking number, weight, dimensions. Rows that couldn't be read cleanly are flagged (not guessed) with a plain-language note explaining why. You can filter the table down to a single status, and click "what do the flags mean?" for a full reference of every flag.
 
@@ -180,7 +183,8 @@ The repo does not currently include a `.env.example` file — see the note at th
 <!-- ![Results table with flags](docs/images/results-table-with-flags.png) -->
 <!-- ============================================= -->
 
-*[Screenshot: Results table with flags — will be placed here]*
+<img width="880" height="537" alt="image" src="https://github.com/user-attachments/assets/2620e927-ef2b-4932-9763-9fdfe831c4f9" />
+
 
 **4. Download the CSV.** One click exports every row in the batch — clean reads and flagged rows alike — as a single CSV file you can open in Excel or hand off downstream.
 
@@ -190,7 +194,8 @@ The repo does not currently include a `.env.example` file — see the note at th
 <!-- ![CSV download](docs/images/csv-download.png) -->
 <!-- ============================================= -->
 
-*[Screenshot: CSV download — will be placed here]*
+<img width="1695" height="237" alt="image" src="https://github.com/user-attachments/assets/32209509-6c90-45d3-9e0f-d45b91f2f266" />
+
 
 ## Output Format
 
